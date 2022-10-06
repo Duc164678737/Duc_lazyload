@@ -1,0 +1,92 @@
+@import '../../atoms/color.scss';
+
+.page{
+    margin: 4em 10%;
+    & .pageHome{
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+        & img {
+            transition: all 0.4s ease-in-out;
+            &:hover {
+                transform: translateY(-20px);
+                cursor: pointer;
+            }
+        }
+
+        & .pageHomeContent{
+            top: 0;
+            margin-top: 6em;
+            text-align: left;
+            & h2 {
+                font-size: 3em;
+              line-height: 1.1em;
+             font-weight: 700;
+             margin: 0;
+             letter-spacing: 2px;
+             color: $starbuck;
+            }
+            & p  {
+                margin: 4em 0;
+             letter-spacing: 1px;
+
+            }
+        }
+        & .pageBtn{
+            // margin: 0 40%;
+            & .pageBtnLink{
+                position: relative;
+                background: $starbuckPink;
+                color: $white;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 1.2em;
+                font-weight: 500;
+                padding: 8px 40px;
+                letter-spacing: 0.2em;
+                transition: 0.5s;
+                
+                &:hover {
+                    letter-spacing: 0.35em;
+                    background: $btnBlue;
+                    box-shadow: 0 0 35px $btnBlue;
+                }
+
+                // &::before {
+                //     content: '';
+                //     position: absolute;
+                    
+                // }
+                // & span {
+                //     position: relative;
+                //     z-index: 1;
+                // }
+                // & i {
+                //     position: absolute;
+                //     inset: 0;
+                //     display: block;
+                //     &::before {
+                //         content: '';
+                //         position: absolute;
+                //         width: 6px;
+                //         height: 6px;
+                //         background: $white;
+                //         border: 2px solid $starbuckPink;
+                //         top: -6px;
+                //         left: 100%;
+                //         transform: translateX(-50%);
+                //         transition: 0.5s;
+                //         display: none;
+                //     }
+                //    &:hover::before {
+                //     display: inline-block;
+                //    }
+                // }
+                
+            }
+        }
+    }
+    
+}
+
+

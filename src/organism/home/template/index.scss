@@ -1,0 +1,167 @@
+@import '../../../atoms/color.scss';
+
+body {
+    // background: $tim;
+}
+h2 {
+    color: $btnRed;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    thead {
+
+
+        tr {
+            background: rgb(84, 84, 87);
+            color: $white;
+            th{
+                text-align: center;
+            }
+        }
+    }
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    // text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+    th button {
+       
+    }
+  }
+.table {
+    padding: 0 100px;
+    
+    .action {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        button{
+            width: 34px;
+            height: 30px;
+            
+            border: 1px solid $tim;
+            border-radius: 6px;
+            transition: all 0.25s ease-in-out;
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-6px);
+                box-shadow: 1px 1px 20px $btnBlue;
+            }
+        }
+        .action-Eye{
+            svg {
+                color: $btnRed;
+            }
+        }
+        .action-Edit{
+            svg {
+                color: $btnBlue;
+            }
+        }
+        .action-Delete{
+            svg {
+                color: $starbuck;
+            }
+        }
+    }
+}
+.userImg {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.searchTable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    .searchTable-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & input {
+          border: 1px solid $starbuckPink;
+          outline: none;
+          padding: 10px 120px 10px 10px;
+          border-radius: 2px;
+          margin: 2px 0 2px 1px;
+          color: $starbuckPink;
+          &:focus-within{
+          border-color: $starbuckPink2;
+          box-shadow: 1px 1px 20px $btnRed;
+          color: $starbuckPink;
+          }
+        }
+        & .searchIcon {
+          padding: 10px 12px 10px 12px;
+          border-radius: 2px;
+          border: 1px solid $starbuckPink;
+          background: $starbuck;
+          color: $white;
+          &:hover {
+          border-color: $starbuck;
+          box-shadow: 1px 1px 20px $starbuck;
+          cursor: pointer;
+          }
+        }
+      }
+      .searchTable-sort {
+        
+        span {
+          color: $btnBlue;
+          font-weight: 600;
+          margin-right: 1px;
+        }
+        select {
+          color: $starbuckPink2;
+          padding: 4px 6px;
+          border: 1px solid $btnBlue;
+          cursor: pointer;
+          &:focus-visible {
+            outline: none;
+          }
+          option {
+            height: 10px;
+          }
+        }
+        
+      }
+}
+
+.pagination {
+  margin: 10px 10px;
+  .paginationBtn{
+    padding: 5px 10px;
+    margin: 0 2px;
+    border: 1px solid $starbuckPink2;
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+      cursor: pointer;
+      background: $starbuckPink;
+      color: $white;
+    }
+    &:disabled {
+      cursor: default;
+      background: none;
+      color: rgba(16, 16, 16, 0.3);
+  }
+    Link{
+      
+      button{
+
+      }
+    }
+
+  }
+}

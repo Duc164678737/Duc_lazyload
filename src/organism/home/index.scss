@@ -1,0 +1,261 @@
+
+@import '../../atoms/color.scss';
+@import '../../components/GlobalStyles/GlobalStyles.scss';
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  // width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+ 
+
+  & .logo {
+    position: relative;
+    max-width: 80px;
+    & img {
+      max-width: 70px;
+    }
+  }
+  & ul {
+    position: relative;
+    display: flex;
+
+    & li {
+      list-style: none;
+    }
+    & li a {
+      display: inline-block;
+      color: $starbuck;
+      font-weight: 600;
+      margin-left: 40px;
+      text-decoration: none;
+      position: relative;
+      &:hover {
+        color: $starbuckPink;
+      }
+      &::after {
+        transition: all 0.4s;
+        content: '';
+        position: absolute;
+        width: 0;
+        border-bottom: 2px solid $starbuckPink;
+        bottom: -2px;
+        left: 0px;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.content {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 20px 100px;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  & .contentBox {
+    text-align: left;
+    position: relative;
+    max-width: 600px;
+
+    & h2 {
+      font-size: 4em;
+      line-height: 1.2em;
+      font-weight: 500;
+      margin: 0;
+    }
+    & h2 span {
+      color: $starbuck;
+      font-style: 1.2em;
+      font-weight: 800;
+      font-style: italic;
+    }
+
+    & a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 20px;
+      background: $starbuck;
+      color: $white;
+      border-radius: 40px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+  }
+  & .imgBox {
+    width: 500px;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    padding-right: 100px;
+    
+    & .imgBoxStabuck {
+      max-width: 320px;
+    }
+  }
+
+  & .thumb {
+    position: absolute;
+    // left: 50%;
+    right: 12%;
+    // bottom: -20px;
+    // padding-right: 100px;
+    // left: 10%;
+    list-style: none;
+    & li {
+      transition: all .5s ease-in-out;
+      & img {
+        max-width: 70px;
+      }
+    }
+    & li:hover {
+      cursor: pointer;
+      transform: translateX(20px);
+    }
+  }
+
+  
+}
+.background {
+  // position: relative;
+  background: $starbuck;
+  clip-path: circle(600px at right);
+}
+
+.main {
+  display: block;
+  margin: 0 auto;
+  max-width: 56rem;
+  padding: 1rem;
+}
+
+ul.homeLazy {
+    counter-reset: gradient-counter;
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+  
+  & img {
+    max-width: 4em;
+    margin-left: 4em;
+  }
+  & .homeLazy__title {
+    background: white;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    @extend %boxshadow;
+    counter-increment: gradient-counter;
+    margin-top: 2rem;
+    min-height: 3rem;
+    padding: 1rem 3rem 1rem 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease-in-out;
+    text-align: right;
+    top: 0;
+    &:hover {
+      scale: 1.1;
+    }
+
+    &::before,
+    &::after {
+      background: linear-gradient(135deg, $blue 0%,$green 100%);
+      border-radius: 1rem 1rem 0 1rem;
+      content: '';
+      height: 3rem;
+      left: -1rem;
+      overflow: hidden;
+      position: absolute;
+      top: -1rem;
+      width: 3rem;
+    }
+    &::before {
+      @extend %boxshadow;
+      content: counter(gradient-counter);
+      color: $black;
+      display: flex;
+      font: 900 1.5em/1 'Montserrat';
+      justify-content: center;
+      align-items: center;
+      padding: 0.125em 0.25em;
+      z-index: 1;
+    }
+    & .btnDetail {
+        margin-top: 0.5rem;
+        width: 16%;
+        margin-left: 80%;
+        padding: 0.6em 0;
+        border: 1px solid #42F8f2;
+        text-transform: uppercase;
+        letter-spacing:1px;
+        background: $starbuck;
+        border-radius: 5px;
+        transition: ease-out 0.3s;
+        position: relative;
+        transition: 0.3s all ease-in-out;
+        &:hover {
+          cursor: pointer;
+          background: $starbuckPink;
+          box-shadow: 0 0 35px $starbuckPink;
+          letter-spacing:0.2em;
+
+        }
+        & .btnLink{
+            text-decoration: none;
+           color: $white;
+           z-index: 10;
+        }
+    }
+}
+}
+
+.home > .homeList {
+  color: $starbuckPink;
+  font-size: 4em;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.home .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & input {
+    border: 1px solid $starbuckPink;
+    outline: none;
+    padding: 10px 120px 10px 10px;
+    border-radius: 2px;
+    margin: 2px 0 2px 20px;
+    transition: all 0.2s linear;
+    color: $starbuckPink;
+    &:focus-within{
+      transform: translateY(-4px);
+    border-color: $starbuckPink2;
+    box-shadow: 1px 1px 20px $btnRed;
+    color: $starbuckPink;
+    }
+  }
+  & .searchIcon {
+    padding: 10px 12px 10px 12px;
+    border-radius: 2px;
+    // margin: 2px 20px;
+    border: 1px solid $starbuckPink;
+    background: $starbuck;
+    color: $white;
+    transition: all 0.2s linear;
+    &:hover {
+      transform: translateY(-4px);
+    border-color: $starbuck;
+    box-shadow: 1px 1px 20px $starbuck;
+    cursor: pointer;
+    }
+  }
+}

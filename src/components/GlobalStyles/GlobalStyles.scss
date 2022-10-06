@@ -1,0 +1,16 @@
+@import '../../atoms/color.scss';
+
+$body-color: red;
+
+html,body {
+  color: $body-color;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $white;
+  color: $black;
+  // font-family: 'Raleway', sans-serif;
+}
